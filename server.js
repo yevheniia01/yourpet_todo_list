@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.static("public"));
 // mongoose.connect('mongodb://localhost/pet_todo_db', {useNewUrlParser: true});
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/pettododb";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://newuser:Ghzlata44@ds353007.mlab.com:53007/heroku_fkjwxwk0";
 
 mongoose.connect(MONGODB_URI);
 
