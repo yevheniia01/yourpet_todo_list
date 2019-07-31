@@ -1,0 +1,28 @@
+{
+  "name": "yourpet_todo_list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yevheniia01/yourpet_todo_list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yevheniia01/yourpet_todo_list/issues"
+  },
+  "homepage": "https://github.com/yevheniia01/yourpet_todo_list#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.6.7",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1"
+  }
+}
