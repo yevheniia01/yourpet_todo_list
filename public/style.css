@@ -1,0 +1,44 @@
+body{
+    background-image: url('./images/1502789193_20160612005.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    text-shadow: 5px 1px 0px #f0f4fa;
+    font-size: 100px;
+    font-family: 'Luckiest Guy', cursive;
+}
+h3{
+    text-shadow: 5px 1px 0px #f0f4fa;
+    font-size: 50px;
+    font-family: 'Bangers', cursive;
+}
+li{
+    text-shadow: 5px 1px 0px #f0f4fa;
+   font-size: 30px;
+    font-family: 'Bangers', cursive;
+}
+.deleteBtn{
+    box-shadow: 6px 5px 11px 0px #39a1ce;
+    margin: 10px;
+    background-color: #1cb8ff;
+    border-radius: 50%;
+    width: 50px;
+}
+#todoInput{
+    font-size: 30px;
+    font-family: 'Bangers', cursive;
+    width: 300px;
+    height: 40px;
+    border: 1px #00ceff solid;
+    box-shadow: 6px 5px 11px 0px #39a1ce;
+}
+#todoBtn{
+    font-family: 'Bangers', cursive;
+    height: 40px;
+    background-color: transparent;
+    font-size: 25px;
+    border: 2px #00daff solid;
+    box-shadow: 6px 5px 11px 0px #39a1ce;
+}
