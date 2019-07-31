@@ -30,12 +30,18 @@ app.post('/todo', (req, res)=>{
     .then(function(dbPetTodo){
         res.json(dbPetTodo)
     })
+    .catch(function(err){
+        res.json(err);
+    })
 })
 app.get('/todo', (req,res)=>{
     PetTodo.find({})
     .then(function(dbPetTodo){
         res.json(dbPetTodo)
         console.log(dbPetTodo)
+    })
+    .catch(function(err){
+        res.json(err);
     })
 })
 app.get('/delete/:id', (req, res)=>{
