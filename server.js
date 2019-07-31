@@ -6,6 +6,7 @@ var logger = require("morgan");
 //const dir = path.join(__dirname, 'public');
 var PetTodo = require("./PetTodoModel");
 
+var PORT = process.env.PORT || 8082;
 const app = express();
 
 app.use(logger("dev"));
@@ -14,7 +15,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
-mongoose.connect('mongodb://localhost/pet_todo_db', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost/pet_todo_db', {useNewUrlParser: true});
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/pet_todo_db";
+
+mongoose.connect(MONGODB_URI);
+
+mongoose.set('useFindAndModify', false);
 
 app.post('/todo', (req, res)=>{
     PetTodo.create(req.body)
@@ -41,4 +48,6 @@ app.get('/delete/:id', (req, res)=>{
     })
 })
 
-app.listen(8082, () => console.log('Listening on http://localhost:8082/'));
+app.listen(PORT, function() {
+    console.log("App running on port " + PORT + "!");
+  });
