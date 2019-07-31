@@ -9,6 +9,8 @@ var PetTodo = require("./PetTodoModel");
 var PORT = process.env.PORT || 8082;
 const app = express();
 
+
+app.use(express.static(__dirname + "/public"))
 app.use(logger("dev"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
