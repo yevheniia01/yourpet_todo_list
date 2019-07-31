@@ -10,7 +10,7 @@ var PORT = process.env.PORT || 8082;
 const app = express();
 
 
-app.use(express.static(__dirname + "/public"))
+
 app.use(logger("dev"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
@@ -19,11 +19,11 @@ app.use(express.json());
 app.use(express.static("public"));
 // mongoose.connect('mongodb://localhost/pet_todo_db', {useNewUrlParser: true});
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/pet_todo_db";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/pettododb";
 
 mongoose.connect(MONGODB_URI);
 
-mongoose.set('useFindAndModify', false);
+
 
 app.post('/todo', (req, res)=>{
     PetTodo.create(req.body)
