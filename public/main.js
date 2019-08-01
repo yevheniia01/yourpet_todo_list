@@ -23,6 +23,7 @@ function displayTodos(){
     .then(function(resp){
         var todoList = $('#todoList')
         for (i = 0; i < resp.length; i++) { 
+            
             todoList.append("<li id="+resp[i]._id+">"+resp[i].todo+"<button id="+resp[i]._id+" class='deleteBtn'>x</button>"+"</li>")
         }
     })
