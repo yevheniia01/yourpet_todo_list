@@ -2,8 +2,6 @@ const mongoose = require('mongoose');
 const express = require('express');
 const bodyParser = require('body-parser');
 var logger = require("morgan");
-//const path = require('path')
-//const dir = path.join(__dirname, 'public');
 var PetTodo = require("./PetTodoModel");
 
 var PORT = process.env.PORT || 8082;
