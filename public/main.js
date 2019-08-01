@@ -15,7 +15,7 @@ $.ajax({
 displayTodos()
 })
 function displayTodos(){
-    $('#todoList').empty()
+    // $('#todoList').empty()
     $.ajax({
         type: 'GET',
         url: '/todo',
